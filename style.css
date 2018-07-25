@@ -137,3 +137,13 @@ html, body {
 .lightbox-caption {
     align-self: flex-start;
 }
+
+.left-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lightbox-right-buttons-container {
+    
+}
