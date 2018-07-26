@@ -81,6 +81,11 @@ html, body {
     align-items: center;
 }
 
+.photo-container:hover {
+    background-color: rgba(186, 183, 183, 0.39);
+    border-radius: 15%;
+}
+
 .photo {
     object-fit: contain;
     height: 80%;
@@ -134,11 +139,13 @@ html, body {
 }
 
 .light-button-container {
-    align-self: flex-end;
+    /* align-self: flex-end; */
+    flex: 1;
+    align-items: flex-end;
 }
 
 .light-button {
-    margin: 0px 0px 5px 5px;
+    /* margin: 0px 0px 5px 5px; */
 }
 
 .lightbox-caption {
@@ -150,16 +157,34 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 5px;
 }
 
 .lightbox-right-buttons-container {
     display: flex;
-    flex: 2;
-    flex-direction: column;
+    flex: 1;
+    /* flex-direction: column; */
 }
 
 .right-button-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
+    padding-right: 0;
 }
+
+.right-button {
+    position: relative;
+    left: 60%;
+}
+
+button:hover {
+    background-color: rgb(136, 135, 135);
+    border-radius: 15%;
+}
+
+button:focus {
+    outline: none;
+}
+

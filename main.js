@@ -68,38 +68,3 @@ lightButton.addEventListener('click', function(){
 });
 
 
-// var addNewImage = function (image, i) {
-//     // var image = images[i];
-//     // var currentNum = i;
-//     var newImage = document.createElement('img');
-//     newImage.setAttribute('src', image.url);
-//     newImage.classList.add('photo');
-
-//     var caption = document.createElement('p');
-//     caption.textContent = image.caption;
-//     caption.classList.add('caption');
-
-//     var listItem = document.createElement('li');
-//     listItem.appendChild(newImage);
-//     listItem.appendChild(caption);
-//     listItem.classList.add('photo-container');
-
-//     // var lightBoxImage = document.querySelector(".lightbox-photo");
-//     // var lightBoxCaption = document.querySelector(".lightbox-caption");
-//     // var lightBox = document.querySelector(".lightbox-main");
-
-//     var clickHandler = function () {
-//         currentI = i;
-//         lightBoxImage.setAttribute('src', image.url);
-//         lightBoxCaption.textContent = image.caption;
-//         lightBox.classList.remove("hidden");
-//     }
-
-//     listItem.addEventListener('click', clickHandler);
-
-    
-//     container.appendChild(listItem);
-
-// }
-
-// images.forEach(addNewImage)
