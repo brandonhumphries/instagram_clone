@@ -188,3 +188,6 @@ button:focus {
     outline: none;
 }
 
+.search-box:focus {
+    outline: none;
+}
