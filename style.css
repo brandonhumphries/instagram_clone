@@ -4,11 +4,19 @@ html, body {
     margin: 0;
 }
 
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 .nav-header {
     display: flex;
     justify-content: space-around;
     padding-top: 1em;
+    padding-bottom: 0.5em;
+    flex-shrink: 0;
 }
 
 .icon-container {
@@ -49,7 +57,10 @@ html, body {
 .search-box {
     text-align: center;
     height: 1.5em;
-    /* background-color: #FAFAFA; */
+}
+
+.main-photos-container {
+    overflow-y: auto;
 }
 
 .main-photos {
@@ -58,6 +69,7 @@ html, body {
     padding-left: 0;
     padding-right: 0;
     overflow-y: auto;
+    flex: 9;
 }
 
 .photo-container {
@@ -67,14 +79,12 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* transform: scale(2); */
 }
 
 .photo {
     object-fit: contain;
     height: 80%;
     width: 80%;
-    /* padding-left: 10px; */
 }
 
 .caption {
@@ -109,10 +119,6 @@ html, body {
     height: 100%;
     width: 100%;
     flex: 4;
-    /* height: 40em;
-    width: 40em;
-    max-height: 80%;
-    max-width: 80%; */
 }
 
 .lightbox-photo {
@@ -123,11 +129,12 @@ html, body {
 
 .lightbox-right-container {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    align-items: flex-end;
     flex: 2;
     padding-left: 1em;
+}
+
+.light-button-container {
+    align-self: flex-end;
 }
 
 .light-button {
@@ -136,6 +143,7 @@ html, body {
 
 .lightbox-caption {
     align-self: flex-start;
+    flex: 4;
 }
 
 .left-button-container {
@@ -145,5 +153,13 @@ html, body {
 }
 
 .lightbox-right-buttons-container {
-    
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+
+.right-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

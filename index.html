@@ -8,58 +8,59 @@
     <title>Instagram</title>
 </head>
 <body>
-    <nav class="nav-header">
-        <div class="instagram-icon icon-container">
-            <a href="https://www.instagram.com/">
-                <img src="img/instagram_icon.png" class="icon"/>
-            </a>
-        </div>
-        <div class="instagram-header">
-            <a href="https://www.instagram.com/" class="instagram-link">Instagram</a>
-        </div>
-        <div class="search-box-container">
-            <input type="text" placeholder="Search" class="search-box"/>
-        </div>
-        <div class="explore-icon icon-container">
-            <a href="https://www.instagram.com/explore/">
-                <img src="img/explore_icon.png" class="icon"/>
-            </a>
-        </div>
-        <div class="activity-icon icon-container">
-            <a href="https://www.instagram.com/accounts/activity/">
-                <img src="img/activity_icon.png" class="icon"/>
-            </a>
-        </div>
-        <div class="profile-icon icon-container">
-            <img src="img/profile_icon.png" class="icon"/>
-        </div>
-    </nav>
-    <div>
-        <ul class="main-photos photos-container">
-            <!-- <img src="img/roswell_bridge.jpg" /> -->
-        </ul>
-    </div>
-    <div class="lightbox-main hidden">
-        <div class="lightbox-container">
-            <div class="left-button-container">
-                <button type="button" class="left-button">Left</button>
+    <div class="main">
+        <nav class="nav-header">
+            <div class="instagram-icon icon-container">
+                <a href="https://www.instagram.com/">
+                    <img src="img/instagram_icon.png" class="icon"/>
+                </a>
             </div>
-            <div class="lightbox-photo-container">
-                <img class="lightbox-photo" />
+            <div class="instagram-header">
+                <a href="https://www.instagram.com/" class="instagram-link">Instagram</a>
             </div>
-            <div class="lightbox-right-container">
-                <div class="lightbox-caption">Caption</div>
-                <div class="lightbox-right-buttons-container">
-                    <div>
-                        <button type="button" class="light-button">X</button>
-                    </div>
-                    <div class="right-button-container">
-                        <button type="button" class="right-button">Right</button>
+            <div class="search-box-container">
+                <input type="text" placeholder="Search" class="search-box"/>
+            </div>
+            <div class="explore-icon icon-container">
+                <a href="https://www.instagram.com/explore/">
+                    <img src="img/explore_icon.png" class="icon"/>
+                </a>
+            </div>
+            <div class="activity-icon icon-container">
+                <a href="https://www.instagram.com/accounts/activity/">
+                    <img src="img/activity_icon.png" class="icon"/>
+                </a>
+            </div>
+            <div class="profile-icon icon-container">
+                <img src="img/profile_icon.png" class="icon"/>
+            </div>
+        </nav>
+        <div class="main-photos-container">
+            <ul class="main-photos photos-container">
+            </ul>
+        </div>
+        <div class="lightbox-main hidden">
+            <div class="lightbox-container">
+                <div class="left-button-container">
+                    <button type="button" class="left-button">Left</button>
+                </div>
+                <div class="lightbox-photo-container">
+                    <img class="lightbox-photo" />
+                </div>
+                <div class="lightbox-right-container">
+                    <div class="lightbox-caption">Caption</div>
+                    <div class="lightbox-right-buttons-container">
+                        <div class="light-button-container">
+                            <button type="button" class="light-button">X</button>
+                        </div>
+                        <div class="right-button-container">
+                            <button type="button" class="right-button">Right</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="main.js"></script>
     </div>
-    <script src="main.js"></script>
 </body>
 </html>
