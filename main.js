@@ -9,62 +9,62 @@ var images = [
 ];
 
 
-var container = document.querySelector('.main-photos');
+var container = $('.main-photos');
 var currentI;
-var leftButton = document.querySelector('.left-button');
-var rightButton = document.querySelector('.right-button');
-var lightButton = document.querySelector(".light-button");
-var lightBox = document.querySelector(".lightbox-main");
-var lightBoxImage = document.querySelector(".lightbox-photo");
-var lightBoxCaption = document.querySelector(".lightbox-caption");
+var leftButton = $('.left-button');
+var rightButton = $('.right-button');
+var lightButton = $(".light-button");
+var lightBox = $(".lightbox-main");
+var lightBoxImage = $(".lightbox-photo");
+var lightBoxCaption = $(".lightbox-caption");
 
 images.forEach(
     function (image, i) {
-        var newImage = document.createElement('img');
-        newImage.setAttribute('src', image.url);
-        newImage.classList.add('photo');
+        var newImage = $('<img>');
+        newImage.attr('src', image.url);
+        newImage.addClass('photo');
 
-        var caption = document.createElement('p');
-        caption.textContent = image.caption;
-        caption.classList.add('caption');
+        var caption = $('<p>');
+        caption.text(image.caption);
+        caption.addClass('caption');
 
-        var listItem = document.createElement('li');
-        listItem.appendChild(newImage);
-        listItem.appendChild(caption);
-        listItem.classList.add('photo-container');
+        var listItem = $('<li>');
+        listItem.append(newImage);
+        listItem.append(caption);
+        listItem.addClass('photo-container');
 
         var clickHandler = function () {
             currentI = i;
-            lightBoxImage.setAttribute('src', image.url);
-            lightBoxCaption.textContent = image.caption;
-            lightBox.classList.remove("hidden");
+            lightBoxImage.attr('src', image.url);
+            lightBoxCaption.text(image.caption);
+            lightBox.removeClass("hidden");
         }
 
-        listItem.addEventListener('click', clickHandler);
+        listItem.on('click', clickHandler);
 
-        container.appendChild(listItem);
+        container.append(listItem);
     }
 )
 
 var imageBack = function () {
     currentI = (currentI + images.length - 1) % images.length;
-    lightBoxImage.setAttribute('src', images[currentI].url);
-    lightBoxCaption.textContent = images[currentI].caption;
+    lightBoxImage.attr('src', images[currentI].url);
+    lightBoxCaption.text(images[currentI].caption);
 };
 
 var imageForward = function () {
     currentI = (currentI + images.length + 1) % images.length;
-    lightBoxImage.setAttribute('src', images[currentI].url);
-    lightBoxCaption.textContent = images[currentI].caption;
+    lightBoxImage.attr('src', images[currentI].url);
+    lightBoxCaption.text(images[currentI].caption);
 };
 
-leftButton.addEventListener('click', imageBack);
-rightButton.addEventListener('click', imageForward);
+leftButton.on('click', imageBack);
+rightButton.on('click', imageForward);
 
 
-lightButton.addEventListener('click', function(){
-    var lightBox = document.querySelector(".lightbox-main");
-    lightBox.classList.add("hidden");
+lightButton.on('click', function(){
+    var lightBox = $(".lightbox-main");
+    lightBox.addClass("hidden");
 });
 
 
