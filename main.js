@@ -18,10 +18,8 @@ var lightBox = document.querySelector(".lightbox-main");
 var lightBoxImage = document.querySelector(".lightbox-photo");
 var lightBoxCaption = document.querySelector(".lightbox-caption");
 
-for (var i = 0; i < images.length; i++) {
-    (function () {
-        var image = images[i];
-        var currentNum = i;
+images.forEach(
+    function (image, i) {
         var newImage = document.createElement('img');
         newImage.setAttribute('src', image.url);
         newImage.classList.add('photo');
@@ -36,7 +34,7 @@ for (var i = 0; i < images.length; i++) {
         listItem.classList.add('photo-container');
 
         var clickHandler = function () {
-            currentI = currentNum;
+            currentI = i;
             lightBoxImage.setAttribute('src', image.url);
             lightBoxCaption.textContent = image.caption;
             lightBox.classList.remove("hidden");
@@ -44,13 +42,9 @@ for (var i = 0; i < images.length; i++) {
 
         listItem.addEventListener('click', clickHandler);
 
-        
         container.appendChild(listItem);
-
-
-    })();
-}
-
+    }
+)
 
 var imageBack = function () {
     currentI = (currentI + images.length - 1) % images.length;
@@ -68,47 +62,44 @@ leftButton.addEventListener('click', imageBack);
 rightButton.addEventListener('click', imageForward);
 
 
-
-// var lightButton = document.querySelector(".light-button");
-
 lightButton.addEventListener('click', function(){
     var lightBox = document.querySelector(".lightbox-main");
     lightBox.classList.add("hidden");
 });
 
 
-var addNewImage = function (image, i) {
-    // var image = images[i];
-    // var currentNum = i;
-    var newImage = document.createElement('img');
-    newImage.setAttribute('src', image.url);
-    newImage.classList.add('photo');
+// var addNewImage = function (image, i) {
+//     // var image = images[i];
+//     // var currentNum = i;
+//     var newImage = document.createElement('img');
+//     newImage.setAttribute('src', image.url);
+//     newImage.classList.add('photo');
 
-    var caption = document.createElement('p');
-    caption.textContent = image.caption;
-    caption.classList.add('caption');
+//     var caption = document.createElement('p');
+//     caption.textContent = image.caption;
+//     caption.classList.add('caption');
 
-    var listItem = document.createElement('li');
-    listItem.appendChild(newImage);
-    listItem.appendChild(caption);
-    listItem.classList.add('photo-container');
+//     var listItem = document.createElement('li');
+//     listItem.appendChild(newImage);
+//     listItem.appendChild(caption);
+//     listItem.classList.add('photo-container');
 
-    // var lightBoxImage = document.querySelector(".lightbox-photo");
-    // var lightBoxCaption = document.querySelector(".lightbox-caption");
-    // var lightBox = document.querySelector(".lightbox-main");
+//     // var lightBoxImage = document.querySelector(".lightbox-photo");
+//     // var lightBoxCaption = document.querySelector(".lightbox-caption");
+//     // var lightBox = document.querySelector(".lightbox-main");
 
-    var clickHandler = function () {
-        currentI = i;
-        lightBoxImage.setAttribute('src', image.url);
-        lightBoxCaption.textContent = image.caption;
-        lightBox.classList.remove("hidden");
-    }
+//     var clickHandler = function () {
+//         currentI = i;
+//         lightBoxImage.setAttribute('src', image.url);
+//         lightBoxCaption.textContent = image.caption;
+//         lightBox.classList.remove("hidden");
+//     }
 
-    listItem.addEventListener('click', clickHandler);
+//     listItem.addEventListener('click', clickHandler);
 
     
-    container.appendChild(listItem);
+//     container.appendChild(listItem);
 
-}
+// }
 
-images.forEach(addNewImage)
+// images.forEach(addNewImage)
